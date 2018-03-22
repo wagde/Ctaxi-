@@ -1,0 +1,1 @@
+﻿INSERT [dbo].[DriversTable] ([Id],[licenceNum],[fullName],[phoneNum],[dateBegin],[dateCheck]) VALUES( 2,45123,'yuval cohen',123456789,'1/1/2013','1/1/2009')

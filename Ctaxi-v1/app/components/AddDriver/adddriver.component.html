@@ -1,0 +1,143 @@
+<div class="container">
+    <form #signupForm="ngForm" (ngSubmit)="addDriver(LicenseNumber,fullName,PhoneNumber,startingDate,eyeExaminationDate)">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h2>Add New Driver</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="LicenseNumber">License Number </label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon icontcont" style="width: 2.6rem">
+                            <i class="fas fa-car"></i>
+
+                        </div>
+                        <input type="tel" [(ngModel)]="LicenseNumber" name="LicenseNumber" class="form-control"  maxlength="7"  aria-required="true">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-control-feedback">
+                    <span class="text-danger align-middle">
+                        <!-- Put name validation error messages here -->
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="name">full Name </label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon icontcont" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                        <input [(ngModel)]="fullName" type="text" name="fullname" class="form-control" id="name"
+                               placeholder="John Doe.." required autofocus>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-control-feedback">
+                    <span class="text-danger align-middle">
+                        <!-- Put name validation error messages here -->
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="phoneNumber">Phone Number </label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon icontcont" style="width: 2.6rem">
+                            <i class="fas fa-phone"></i>
+                            
+                        </div>
+                        <input [(ngModel)]="PhoneNumber" maxlength="10" minlength="10" pattern="/^05\d([-]{0,1})\d{7}$/" type="tel" name="PhoneNumber" class="form-control"
+                               placeholder="054000000" required autofocus>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-control-feedback">
+                    <span class="text-danger align-middle">
+                        <!-- Put name validation error messages here -->
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="StartingDate">Starting Date </label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon icontcont" style="width: 2.6rem">
+                            <i class="fas fa-calendar-alt"></i>
+
+                        </div>
+                        <input [(ngModel)]="startingDate" type="date" name="StartingDate" class="form-control"
+                               required autofocus>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-control-feedback">
+                    <span class="text-danger align-middle">
+                        <!-- Put name validation error messages here -->
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 field-label-responsive">
+                <label for="Eye Examination Date">Eye Examination Date </label>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon icontcont" style="width: 2.6rem">
+                            <i class="fas fa-calendar-alt"></i>
+
+                        </div>
+                        <input [(ngModel)]="eyeExaminationDate" type="date" name="Eye Examination Date" class="form-control"
+                               required autofocus>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-control-feedback">
+                    <span class="text-danger align-middle" id="addDriverError" style="color:red;">
+                        <!-- Put name validation error messages here -->
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <button class="btn btn-success"><i class="fa fa-user-plus"></i> Add</button>
+            </div>
+        </div>
+    </form>
+</div>
